@@ -37,22 +37,6 @@ export default function Footer() {
               © {currentYear} Shail Patel. All rights reserved.
             </p>
           </div>
-
-          <div className="flex items-center gap-4">
-            {["Twitter", "LinkedIn", "GitHub", "Dribbble"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className={cn(
-                  "p-2 text-foreground/60 hover:text-foreground transition-colors",
-                  "rounded-full hover:bg-secondary"
-                )}
-                aria-label={social}
-              >
-                <span className="text-sm">{social[0]}</span>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

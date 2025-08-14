@@ -52,17 +52,12 @@ const ContactInfo = () => {
     {
       name: "GitHub",
       icon: <Github size={16} />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/shailtp",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin size={16} />,
-      url: "https://linkedin.com/in/yourusername",
-    },
-    {
-      name: "Portfolio",
-      icon: <Globe size={16} />,
-      url: "https://yourportfolio.com",
+      url: "https://www.linkedin.com/in/shail-patel-0954871aa/",
     },
   ];
 

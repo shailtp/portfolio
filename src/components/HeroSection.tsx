@@ -47,7 +47,7 @@ export default function HeroSection() {
         </div>
         
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-float">
-          <a href="#projects" className="flex flex-col items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#about" className="flex flex-col items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
             <span className="mb-2">Scroll</span>
             <ArrowDown size={16} />
           </a>
