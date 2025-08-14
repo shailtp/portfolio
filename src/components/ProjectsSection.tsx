@@ -58,7 +58,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section id="projects" className="section-padding bg-secondary/50">
+    <section id="projects" className="py-24 md:py-32 bg-secondary/50">
       <div className="container-custom space-y-16" ref={sectionRef}>
         <div className="space-y-4 text-center max-w-3xl mx-auto staggered-fade-in">
           <span className="inline-block px-4 py-1.5 text-sm font-medium bg-background rounded-full">

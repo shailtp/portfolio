@@ -41,7 +41,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-secondary/50">
       <div className="container-custom" ref={sectionRef}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 staggered-fade-in order-2 lg:order-1">
@@ -56,7 +56,7 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate software and machine learning engineering  with a Master's in Computer Science from San Francisco State University, and a Bachelors in Computer Science from Vellore Institute of Technology, India. With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
+                I'm a passionate software and machine learning engineering  with a Master's in Computer Science from San Francisco State University (graduating December 2025), and a Bachelors in Computer Science from Vellore Institute of Technology, India (graduated January 2023). With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
               </p>
               <p>
                 My approach bridges cutting-edge technology with practical applications, whether building real-time data visualization tools or creating AI-powered recommendation systems. I'm driven by the challenge of turning complex problems into elegant, efficient solutions.

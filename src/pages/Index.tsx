@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -38,8 +39,9 @@ const Index = () => {
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />
-        <ProjectsSection />
         <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
         <ContactSection />
       </main>
       <Footer />

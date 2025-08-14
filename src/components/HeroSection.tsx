@@ -19,7 +19,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up text-balance">
-            Software engineer and machine learning enthusiast specializing in creating powerful, intuitive applications that solve real-world problems.
+            Software and machine learning engineer specializing in creating powerful, intuitive applications and AI automations that solve real-world problems.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-slide-up">
