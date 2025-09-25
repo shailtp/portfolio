@@ -6,6 +6,11 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    min-width: 1024px;
+    overflow-x: auto;
+  }
+  
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;

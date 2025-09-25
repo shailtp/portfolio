@@ -5,15 +5,23 @@ import { useEffect, useRef } from "react";
 export default function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const skills = [
-    "JavaScript / TypeScript",
-    "React.js / Next.js",
-    "Python / Django",
-    "Node.js / Express",
-    "AWS / Azure",
-    "MongoDB / PostgreSQL",
-    "GraphQL / REST API",
-    "Machine Learning / Generative AI",
+  const skillCategories = [
+    {
+      title: "Programming Languages",
+      skills: ["Python", "JavaScript", "TypeScript", "C/C++"]
+    },
+    {
+      title: "AI & ML Frameworks",
+      skills: ["PyTorch", "Model Context Protocol (MCP)", "TensorFlow", "Scikit-learn", "LangChain"]
+    },
+    {
+      title: "Development Frameworks",
+      skills: ["React.js", "Node.js", "FastAPI", "Streamlit", "OpenMP (Parallel computing in C++)"]
+    },
+    {
+      title: "DevOps & MLOps",
+      skills: ["Docker", "Kubernetes", "Kubeflow", "Git", "CI/CD (GitHub Actions, Jenkins)", "AWS (EC2, ECS, Lambda)"]
+    }
   ];
 
   // Intersection Observer for animation
@@ -42,9 +50,11 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="section-padding bg-secondary/50">
-      <div className="container-custom" ref={sectionRef}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8 staggered-fade-in order-2 lg:order-1">
+      <div className="container-custom min-w-[1024px]" ref={sectionRef}>
+        {/* About section with text and photos */}
+        <div className="grid grid-cols-2 gap-16 items-start mb-16">
+          {/* Text content */}
+          <div className="space-y-6 staggered-fade-in">
             <div className="space-y-4">
               <span className="inline-block px-4 py-1.5 text-sm font-medium bg-secondary rounded-full">
                 About Me
@@ -56,40 +66,73 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate software and machine learning engineering  with a Master's in Computer Science from San Francisco State University (graduating December 2025), and a Bachelors in Computer Science from Vellore Institute of Technology, India (graduated January 2023). With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
+                I'm a passionate software and machine learning engineering with a Master's in Computer Science from San Francisco State University (graduating December 2025), and a Bachelors in Computer Science from Vellore Institute of Technology, India (graduated January 2023). With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
               </p>
               <p>
                 My approach bridges cutting-edge technology with practical applications, whether building real-time data visualization tools or creating AI-powered recommendation systems. I'm driven by the challenge of turning complex problems into elegant, efficient solutions.
               </p>
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-4">My Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className={cn(
-                      "px-4 py-2 text-sm bg-secondary rounded-full text-foreground/80",
-                      "transition-all hover:bg-secondary/70"
-                    )}
-                  >
-                    {skill}
-                  </span>
-                ))}
+          {/* Photos grid */}
+          <div className="grid grid-cols-1 gap-4 staggered-fade-in">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
+              <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
+                <img
+                  src="/placeholder.svg"
+                  alt="Photo 1"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
+                <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
+                  <img
+                    src="/placeholder.svg"
+                    alt="Photo 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
+                <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
+                  <img
+                    src="/placeholder.svg"
+                    alt="Photo 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="relative order-1 lg:order-2 staggered-fade-in aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-4 translate-y-4"></div>
-            <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000"
-                alt="Portrait"
-                className="w-full h-full object-cover"
-              />
-            </div>
+        {/* Skills section */}
+        <div className="space-y-8">
+          <h3 className="text-xl font-serif font-bold">Technical Skills</h3>
+          <div className="space-y-6">
+            {skillCategories.map((category, index) => (
+              <div key={index} className="flex items-center gap-8">
+                <h4 className="text-lg font-serif min-w-[200px]">{category.title}</h4>
+                <div className="flex items-center gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className={cn(
+                        "px-4 py-2 text-sm bg-secondary rounded-full text-foreground/80",
+                        "transition-all hover:bg-secondary/70"
+                      )}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
