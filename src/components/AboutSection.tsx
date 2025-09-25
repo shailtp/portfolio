@@ -80,8 +80,8 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
               <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
                 <img
-                  src="/placeholder.svg"
-                  alt="Photo 1"
+                  src="/main_image.jpeg"
+                  alt="Professional headshot"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -91,8 +91,8 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
                 <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
                   <img
-                    src="/placeholder.svg"
-                    alt="Photo 2"
+                    src="/snow_image.jpeg"
+                    alt="In snowy forest"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -101,8 +101,8 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-secondary/50 rounded-2xl translate-x-2 translate-y-2"></div>
                 <div className="absolute inset-0 border border-border rounded-2xl overflow-hidden">
                   <img
-                    src="/placeholder.svg"
-                    alt="Photo 3"
+                    src="/sunset_image.JPG"
+                    alt="By the lake at sunset"
                     className="w-full h-full object-cover"
                   />
                 </div>
