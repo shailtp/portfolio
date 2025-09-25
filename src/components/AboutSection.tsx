@@ -65,8 +65,16 @@ export default function AboutSection() {
             </div>
 
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                I'm a passionate software and machine learning engineering with a Master's in Computer Science from San Francisco State University (graduating December 2025), and a Bachelors in Computer Science from Vellore Institute of Technology, India (graduated January 2023). With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
+              <p className="flex-wrap">
+                <span className="whitespace-normal">I'm a passionate software and machine learning engineering with a{" "}</span>
+                <span className="decoration-yellow-300 decoration-2 underline-animation whitespace-nowrap">
+                  Master's in Computer Science from San Francisco State University
+                </span>{" "}
+                <span className="whitespace-normal">(graduating December 2025), and a{" "}</span>
+                <span className="decoration-yellow-300 decoration-2 underline-animation whitespace-nowrap">
+                  Bachelors in Computer Science from Vellore Institute of Technology, India
+                </span>{" "}
+                <span className="whitespace-normal">(graduated January 2023)</span>. With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
               </p>
               <p>
                 My approach bridges cutting-edge technology with practical applications, whether building real-time data visualization tools or creating AI-powered recommendation systems. I'm driven by the challenge of turning complex problems into elegant, efficient solutions.

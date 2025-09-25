@@ -22,7 +22,27 @@ export default function HeroSection() {
             Software and machine learning engineer specializing in creating powerful, intuitive applications and AI automations that solve real-world problems.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-slide-up">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-slide-up flex-wrap">
+            <a 
+              href="#about" 
+              className={cn(
+                "px-6 py-3 bg-foreground text-background font-medium rounded-full transition-all",
+                "hover:shadow-lg hover:translate-y-[-2px]",
+                "focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
+              )}
+            >
+              About Me
+            </a>
+            <a 
+              href="#experience" 
+              className={cn(
+                "px-6 py-3 bg-foreground text-background font-medium rounded-full transition-all",
+                "hover:shadow-lg hover:translate-y-[-2px]",
+                "focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
+              )}
+            >
+              View My Work Experience
+            </a>
             <a 
               href="#projects" 
               className={cn(
