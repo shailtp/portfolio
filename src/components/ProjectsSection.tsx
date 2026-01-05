@@ -8,7 +8,7 @@ export default function ProjectsSection() {
   // Project data from resume
   const projects = [
     {
-      title: "CS Course Recommender",
+      title: "RAG-based Course Recommendation System",
       description: "AI-powered course recommendation system for CS students using LLAMA 7B model and web scraping techniques.",
       tags: ["React.js", "AWS", "MongoDB", "LLAMA"],
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2000",

@@ -8,19 +8,19 @@ export default function AboutSection() {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "JavaScript", "TypeScript", "C/C++"]
+      skills: ["Python", "C/C++", "JavaScript"]
     },
     {
-      title: "AI & ML Frameworks",
-      skills: ["PyTorch", "Model Context Protocol (MCP)", "TensorFlow", "Scikit-learn", "LangChain"]
+      title: "AI/ML Frameworks & Tools",
+      skills: ["PyTorch", "TensorFlow", "RAG systems", "Scikit-learn", "LangChain", "Model Context Protocol (MCP)"]
     },
     {
       title: "Development Frameworks",
-      skills: ["React.js", "Node.js", "FastAPI", "Streamlit", "OpenMP (Parallel computing in C++)"]
+      skills: ["FastAPI", "Streamlit", "OpenMP (Parallel computing in C++)", "Node.js"]
     },
     {
       title: "DevOps & MLOps",
-      skills: ["Docker", "Kubernetes", "Kubeflow", "Git", "CI/CD (GitHub Actions, Jenkins)", "AWS (EC2, ECS, Lambda)"]
+      skills: ["Docker", "Kubernetes", "MLflow", "Git", "CI/CD (GitHub Actions, Jenkins)", "AWS (EC2, ECS, Lambda)"]
     }
   ];
 
@@ -66,15 +66,15 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground">
               <p className="flex-wrap">
-                <span className="whitespace-normal">I'm a passionate software and machine learning engineering with a{" "}</span>
+                <span className="whitespace-normal">I'm a passionate Data Scientist and AI/ML engineer with a{" "}</span>
                 <span className="decoration-yellow-300 decoration-2 underline-animation whitespace-nowrap">
                   Master's in Computer Science from San Francisco State University
                 </span>{" "}
-                <span className="whitespace-normal">(graduating December 2025), and a{" "}</span>
+                <span className="whitespace-normal">(graduated December 2025), and a{" "}</span>
                 <span className="decoration-yellow-300 decoration-2 underline-animation whitespace-nowrap">
                   Bachelors in Computer Science from Vellore Institute of Technology, India
                 </span>{" "}
-                <span className="whitespace-normal">(graduated January 2023)</span>. With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
+                <span className="whitespace-normal">(graduated May 2023)</span>. With a diverse background in full-stack development, AI, and machine learning, I craft technology solutions that combine technical excellence with real-world impact.
               </p>
               <p>
                 My approach bridges cutting-edge technology with practical applications, whether building real-time data visualization tools or creating AI-powered recommendation systems. I'm driven by the challenge of turning complex problems into elegant, efficient solutions.
