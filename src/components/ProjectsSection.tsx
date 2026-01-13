@@ -1,36 +1,50 @@
-
 import { useEffect, useRef } from "react";
-import ProjectCard from "./ProjectCard";
+import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
 export default function ProjectsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
-  // Project data from resume
-  const projects = [
+  const aiProjects = [
     {
-      title: "RAG-based Course Recommendation System",
-      description: "AI-powered course recommendation system for CS students using LLAMA 7B model and web scraping techniques.",
-      tags: ["React.js", "AWS", "MongoDB", "LLAMA"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2000",
+      id: "codecontext",
+      title: "CodeContext: Automated Multi-Source LLM Ingestion",
+      githubLink: "https://github.com/shailtp/CodeContext-Automated_Multi-Source-LLM-Ingestion"
     },
     {
-      title: "Leetcode AI Assistant",
-      description: "Google Chrome extension leveraging Google Gemini API to provide auto-suggestions and detailed solutions for coding challenges.",
-      tags: ["JavaScript", "Gemini API", "Chrome Extension"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2000",
+      id: "course-buddy",
+      title: "Course Buddy - RAG system for SF State's CS course selection process",
+      githubLink: "https://github.com/shailtp/course-buddy"
     },
     {
-      title: "Edu Bridge LMS",
-      description: "Full-stack Learning Management System with video streaming, content sharing, and real-time collaboration features.",
-      tags: ["React.js", "Node.js", "MySQL", "AWS"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2000",
+      id: "e1-gene-cluster",
+      title: "E1 Gene Cluster - Random Forest Classifier Model & Streamlit Website",
+      githubLink: "https://github.com/shailtp/E1-gene-prediction-using-Random-Forest-ML-model"
+    }
+  ];
+
+  const softwareProjects = [
+    {
+      id: "openmp-molecular-dynamics",
+      title: "OpenMP Parallel Computing Simulation of Molecular Dynamics",
+      githubLink: "https://github.com/shailtp/OpenMP-Parallel-Computing-Simulation-of-Molecular-Dynamics"
     },
     {
-      title: "Stock Visualization App",
-      description: "Real-time stock dashboard displaying live data for NYSE and NASDAQ stocks with advanced analytics capabilities.",
-      tags: ["React.js", "Node.js", "Redis", "AlphaVantage API"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000",
+      id: "edubridge",
+      title: "Edubridge: A learning management system",
+      githubLink: "https://github.com/nh0397/EduBridge"
     },
+    {
+      id: "sfo-traffic-visualization",
+      title: "SFO Passenger Traffic Visualization System",
+      githubLink: "https://github.com/shailtp/airtraffic-sfo-visualisation"
+    },
+    {
+      id: "no-escape",
+      title: "No-Escape: Action maze chase game",
+      githubLink: "https://github.com/shailtp/no-escape"
+    }
   ];
 
   // Intersection Observer for animation
@@ -57,32 +71,71 @@ export default function ProjectsSection() {
     };
   }, []);
 
-  return (
-    <section id="projects" className="py-24 md:py-32 bg-secondary/50">
-      <div className="container-custom space-y-16" ref={sectionRef}>
-        <div className="space-y-4 text-center max-w-3xl mx-auto staggered-fade-in">
-          <span className="inline-block px-4 py-1.5 text-sm font-medium bg-background rounded-full">
-            Projects
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-balance">
-            Featured Work
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my technical projects that demonstrate problem-solving skills and innovative thinking.
-          </p>
-        </div>
+  const handleCardClick = (projectId: string) => {
+    navigate(`/projects/${projectId}`);
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 staggered-fade-in">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              image={project.image}
-              delay={index * 100}
-            />
-          ))}
+  return (
+    <section id="projects" className="pt-8 pb-20 bg-secondary/50">
+      <div className="container-custom min-w-[1024px]" ref={sectionRef}>
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="space-y-4 text-center max-w-3xl mx-auto staggered-fade-in">
+            <span className="inline-block px-4 py-1.5 text-sm font-medium bg-background rounded-full">
+              Projects
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-balance">
+              Featured Work
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              A showcase of my technical projects in various sub-domains of Computer Science
+            </p>
+            <p className="text-sm text-muted-foreground">
+              💡 Click on a card to see details!
+            </p>
+          </div>
+
+          {/* Generative AI, Transformer models & ML engineering */}
+          <div className="space-y-8 staggered-fade-in">
+            <div>
+              <h3 className="text-2xl font-serif font-bold mb-6">Generative AI, Transformer models & ML engineering</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {aiProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    onClick={() => handleCardClick(project.id)}
+                    className={cn(
+                      "p-6 bg-card border border-border/40 rounded-xl",
+                      "hover:shadow-lg transition-all duration-300 cursor-pointer",
+                      "staggered-fade-in"
+                    )}
+                  >
+                    <h4 className="text-base font-semibold text-center">{project.title}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Software Engineering */}
+            <div>
+              <h3 className="text-2xl font-serif font-bold mb-6">Software Engineering</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {softwareProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    onClick={() => handleCardClick(project.id)}
+                    className={cn(
+                      "p-6 bg-card border border-border/40 rounded-xl",
+                      "hover:shadow-lg transition-all duration-300 cursor-pointer",
+                      "staggered-fade-in"
+                    )}
+                  >
+                    <h4 className="text-base font-semibold text-center">{project.title}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
