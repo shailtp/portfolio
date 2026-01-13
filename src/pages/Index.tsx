@@ -1,9 +1,9 @@
 
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
+import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import Footer from "@/components/Footer";
@@ -38,8 +38,8 @@ const Index = () => {
     <>
       <Navbar />
       <main className="overflow-hidden">
-        <HeroSection />
         <AboutSection />
+        <EducationSection />
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />

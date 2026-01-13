@@ -30,8 +30,8 @@ export default function Navbar() {
 
   // Nav items
   const navItems = [
-    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Education", href: "#education" },
     { name: "Work Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a
-          href="#home"
+          href="#about"
           className="text-xl font-serif font-bold tracking-tighter hover:opacity-80 transition-opacity select-none"
         >
           portfolio.

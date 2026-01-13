@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start gap-1">
             <a
-              href="#home"
+              href="#about"
               className="text-xl font-serif font-bold tracking-tighter hover:opacity-80 transition-opacity"
             >
               portfolio.
@@ -22,7 +22,7 @@ export default function Footer() {
 
           <div className="flex flex-col items-center gap-4">
             <nav className="flex items-center gap-6">
-              {["Home", "Projects", "About", "Contact"].map((item) => (
+              {["About", "Projects", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
