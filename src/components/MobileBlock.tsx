@@ -26,14 +26,16 @@ export default function MobileBlock({ children }: { children: React.ReactNode })
 
   if (isPhone) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-6">
-        <div className="text-center max-w-md space-y-6">
-          <h1 className="text-3xl font-bold">Desktop Experience Required</h1>
-          <p className="text-muted-foreground text-lg">
+      <div className="min-h-screen flex items-center justify-center bg-background px-4 py-8">
+        <div className="text-center w-full max-w-sm space-y-4">
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
+            Desktop Experience Required
+          </h1>
+          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed px-2">
             This portfolio is optimized for desktop, laptop, and tablet screens. Please visit this site on a computer, laptop, or tablet for the best experience.
           </p>
-          <div className="pt-4">
-            <p className="text-sm text-muted-foreground">
+          <div className="pt-2">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Minimum screen width: 768px
             </p>
           </div>
