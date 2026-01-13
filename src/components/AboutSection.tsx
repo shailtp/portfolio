@@ -30,7 +30,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" className="pt-32 pb-40 bg-secondary/50">
+    <section id="about" className="pt-32 pb-12 bg-secondary/50">
       <div className="container-custom min-w-[1024px]" ref={sectionRef}>
         {/* Greeting at the top */}
         <div className="text-center mb-8 animate-stagger">
@@ -82,7 +82,7 @@ export default function AboutSection() {
         </div>
 
         {/* Action buttons at the bottom */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-12 mb-20 animate-slide-up flex-wrap">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-12 mb-4 animate-slide-up flex-wrap">
           <a 
             href="#education" 
             className={cn(

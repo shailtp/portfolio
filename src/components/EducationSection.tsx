@@ -30,7 +30,7 @@ export default function EducationSection() {
     {
       degree: "Master's in Computer Science",
       university: "San Francisco State University",
-      location: "San Francisco, CA",
+      location: "San Francisco, California",
       logo: "/sfsu-logo.png",
       year: "December 2025"
     },
@@ -68,7 +68,7 @@ export default function EducationSection() {
   }, []);
 
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="pt-8 pb-20">
       <div className="container-custom min-w-[1024px]" ref={sectionRef}>
         <div className="space-y-12">
           {/* Header */}
