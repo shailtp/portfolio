@@ -61,7 +61,7 @@ export default function AboutSection() {
               I am a graduate Computer Scientist and love working on problems in the domain of AI/ML and Systems/Backend engineering, with a specific focus on Transformer models, Retrieval Augmented Generation (RAG), RecSys architectures, Parallel computing (OpenMP, C/C++) and Multi-Agent Orchestration.
               </p>
               <p>
-                I specialize in translating complex data into measurable business impact, from developing RAG pipelines for contextual course ranking to fine-tuning LLMs with LoRA (Low Rank Adaptation) for Walmart e-commerce search relevancy. I am highly proficient in Python (Scikit-learn, FastAPI,TensorFlow), C/C++ (OpenMP), Node.js and MLOps (AWS, Docker, Kubernetes) to deploy production-ready, low-latency backend services.
+                I specialize in translating complex data into measurable business impact, from developing RAG pipelines for contextual course ranking to fine tuning LLMs with LoRA (Low Rank Adaptation) for Walmart e-commerce search relevancy. I am highly proficient in Python (Scikit, FastAPI,TensorFlow), C/C++ (OpenMP), Node.js and MLOps (AWS, Docker, Kubernetes) to deploy production-ready, low-latency backend services.
               </p>
             </div>
           </div>
