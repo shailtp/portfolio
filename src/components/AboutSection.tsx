@@ -42,7 +42,7 @@ export default function AboutSection() {
         {/* Main heading right below greeting */}
         <div className="text-center mb-12 px-4">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
-            Machine Learning, Artificial Intelligence & Data Science
+            Machine Learning, AI & Systems Engineer
           </h2>
         </div>
 
@@ -58,10 +58,10 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I am a Computer Scientist specializing in building scalable AI/ML solutions and predictive Data Science systems. My background bridges the gap between data science and AI engineering, with a specific focus on Predictive Data science systems, Transformer models, Retrieval Augmented Generation (RAG), RecSys, and Multi-Agent Orchestration.
+              I am a graduate Computer Scientist and love working on problems in the domain of AI/ML and Systems/Backend engineering, with a specific focus on Transformer models, Retrieval Augmented Generation (RAG), RecSys architectures, Parallel computing (OpenMP, C/C++) and Multi-Agent Orchestration.
               </p>
               <p>
-                I specialize in translating complex data into measurable business impact, from developing RAG pipelines for contextual course ranking to fine-tuning LLMs with LoRA (Low Rank Adaptation) for e-commerce search relevancy. I am highly proficient in Python (Scikit-learn, FastAPI,TensorFlow), C/C++ (OpenMP), Node.js and MLOps (AWS, Docker, Kubernetes) to deploy production-ready, low-latency inference services.
+                I specialize in translating complex data into measurable business impact, from developing RAG pipelines for contextual course ranking to fine-tuning LLMs with LoRA (Low Rank Adaptation) for Walmart e-commerce search relevancy. I am highly proficient in Python (Scikit-learn, FastAPI,TensorFlow), C/C++ (OpenMP), Node.js and MLOps (AWS, Docker, Kubernetes) to deploy production-ready, low-latency backend services.
               </p>
             </div>
           </div>

@@ -56,7 +56,7 @@ export default function ExperienceSection() {
       startDate: "January 2023",
       endDate: "May 2023",
       duration: "5 months",
-      description: "Payment services integration and monitoring, backend performance optimization and database management for company e-commerce portal used by 1300+ client companies across South East Asia.",
+      description: "Developed and maintained order-management, transaction and inventory backend microservices using Node.js and Django for company e-commerce portal used by 1300+ client companies across South East Asia.",
       skills: ["Amazon Web Services (AWS)", "MongoDB", "Node.js", "REST APIs", "Microservices", "Distributed Systems", "Agile Methodologies"]
     },
     {
