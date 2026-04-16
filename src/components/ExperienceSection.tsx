@@ -9,7 +9,7 @@ export default function ExperienceSection() {
 
   const campusRoles = [
     {
-      title: "Graduate Assistant",
+      title: "Graduate Assistant - AI engineer",
       company: "San Francisco State University | College of Professional & Global Education",
       logo: "/sfsu-logo.png",
       location: "San Francisco, California, United States",
@@ -17,7 +17,7 @@ export default function ExperienceSection() {
       startDate: "April 2025",
       endDate: "December 2025",
       duration: "9 months",
-      description: "Responsible for designing and deploying multiple custom AI agent workflows using LangChain, Python scripts, and Box MCP for Enrollment application services, student communication, and file handling.",
+      description: "Responsible for architecting and deploying an Agentic AI automation workflow using LangChain, Python scripts, and Box MCP for Enrollment application services, student communication, and file handling.",
       skills: ["Artificial Intelligence (AI)", "LangChain", "Automation", "Python", "Model Context Protocol"]
     },
     {
