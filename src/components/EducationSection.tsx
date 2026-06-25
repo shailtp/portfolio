@@ -118,6 +118,7 @@ export default function EducationSection() {
                       <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
                       <p className="text-lg font-medium text-foreground/90">{edu.university}</p>
                     </div>
+                  
                     
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1.5">

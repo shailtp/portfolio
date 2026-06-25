@@ -60,7 +60,7 @@ export default function ExperienceSection() {
       skills: ["Amazon Web Services (AWS)", "MongoDB", "Node.js", "REST APIs", "Microservices", "Distributed Systems", "Agile Methodologies"]
     },
     {
-      title: "Data Analyst Intern",
+      title: "Data Science Intern",
       company: "J-PAL South Asia",
       logo: "/jpal-logo.png",
       location: "New Delhi, Delhi, India",
