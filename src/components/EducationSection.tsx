@@ -18,7 +18,7 @@ export default function EducationSection() {
     },
     {
       title: "Development Frameworks",
-      skills: ["FastAPI", "Streamlit", "OpenMP (Parallel computing in C++)", "Node.js"]
+      skills: ["FastAPI", "Streamlit", "OpenMP (Parallel computing in C", "Node.js"]
     },
     {
       title: "DevOps & MLOps",

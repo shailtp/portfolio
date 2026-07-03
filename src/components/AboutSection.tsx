@@ -58,10 +58,10 @@ export default function AboutSection() {
 
             <div className="space-y-4 text-muted-foreground">
               <p>
-              I am a graduate Computer Scientist and love working on problems in the domain of AI/ML and Systems/Backend engineering, with a specific focus on Transformer models, Retrieval Augmented Generation (RAG), RecSys architectures, Parallel computing (OpenMP, C/C++) and Multi-Agent Orchestration.
+              I am a graduate computer scientist and love working on problems in the domain of AI/ML and Systems/Backend engineering. Have primarily worked as a backend software and applied AI engineer in manufacturing, e-commerce and educational/research sectors.
               </p>
               <p>
-              I am highly proficient in Python (Scikit, FastAPI,TensorFlow), C/C++ (OpenMP), Node.js and MLOps (AWS, Docker, Kubernetes) to deploy production-ready, low-latency backend services for traditional enterprise Software products and modern AI engineering systems.
+              Collaborative by nature, curious by default. Actively searching for my next full time engineering role where I can build the infrastructure powering the next generation of AI systems and enterprise software products. Open to opportunities within the United States, and can be reached via LinkedIn or at patelshail233@gmail.com.
               </p>
             </div>
           </div>
