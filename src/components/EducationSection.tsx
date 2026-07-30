@@ -22,7 +22,7 @@ export default function EducationSection() {
     },
     {
       title: "DevOps & MLOps",
-      skills: ["Docker", "Kubernetes", "MLflow", "Git", "CI/CD (GitHub Actions, Jenkins)", "AWS (EC2, ECS, Lambda)"]
+      skills: ["Docker", "Kubernetes", "Triton Inference server", "Git", "CI/CD (GitHub Actions, Jenkins)", "AWS (EC2, ECS, Lambda)"]
     }
   ];
 

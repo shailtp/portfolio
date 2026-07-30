@@ -42,7 +42,7 @@ export default function ExperienceSection() {
       endDate: "May 2025",
       duration: "10 months",
       description: "Research study on enhancing search results for Walmart e-commerce data by fine-tuning LLMs (Low rank adaptation) and testing of Large Language Models in recommendation systems.",
-      skills: ["MLOps", "Software Infrastructure", "Machine Learning", "Recommender Systems", "TensorFlow", "Python", "Large Language Models (LLM)"]
+      skills: ["MLOps", "Software Infrastructure", "PyTorch", "Triton Inference server", "Recommender Systems", "Large Language Models (LLM)"]
     }
   ];
 
