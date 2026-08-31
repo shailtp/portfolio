@@ -19,20 +19,15 @@ export default function ContactSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const section = sectionRef.current;
+    if (section) observer.observe(section);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section id="contact" className="py-24 md:py-32">
-      <div className="container-custom space-y-16" ref={sectionRef}>
+      <div className="container-custom min-w-[1024px] space-y-16" ref={sectionRef}>
         <div className="space-y-4 text-center max-w-3xl mx-auto staggered-fade-in">
           <span className="inline-block px-4 py-1.5 text-sm font-medium bg-background rounded-full">
             Contact

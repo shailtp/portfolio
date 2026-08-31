@@ -18,7 +18,7 @@ export default function EducationSection() {
     },
     {
       title: "Development Frameworks",
-      skills: ["FastAPI", "Streamlit", "OpenMP (Parallel computing in C", "Node.js"]
+      skills: ["FastAPI", "Streamlit", "OpenMP (Parallel Computing in C)", "Node.js"]
     },
     {
       title: "DevOps & MLOps",
@@ -56,15 +56,10 @@ export default function EducationSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const section = sectionRef.current;
+    if (section) observer.observe(section);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (

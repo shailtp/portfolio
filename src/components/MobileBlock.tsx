@@ -1,25 +1,15 @@
 import { useEffect, useState } from "react";
 
 export default function MobileBlock({ children }: { children: React.ReactNode }) {
-  const [isPhone, setIsPhone] = useState(false);
+  const [isUnsupportedViewport, setIsUnsupportedViewport] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
-      const width = window.innerWidth;
-      const userAgent = navigator.userAgent.toLowerCase();
-      
-      // Detect phones specifically (not tablets)
-      const isPhoneDevice = 
-        // Screen width check - phones are typically < 768px
-        width < 768 ||
-        // User agent checks for phones (excluding tablets)
-        (/android.*mobile|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent) && 
-         !/ipad|tablet|playbook|silk/i.test(userAgent));
-      
-      setIsPhone(isPhoneDevice);
-      
-      // Override body min-width when on phone
-      if (isPhoneDevice) {
+      const isUnsupported = window.innerWidth < 1024;
+
+      setIsUnsupportedViewport(isUnsupported);
+
+      if (isUnsupported) {
         document.body.style.minWidth = '0';
         document.body.style.overflowX = 'hidden';
         document.documentElement.style.overflowX = 'hidden';
@@ -41,7 +31,7 @@ export default function MobileBlock({ children }: { children: React.ReactNode })
     };
   }, []);
 
-  if (isPhone) {
+  if (isUnsupportedViewport) {
     return (
       <div 
         className="min-h-screen flex items-center justify-center bg-background"
@@ -65,11 +55,11 @@ export default function MobileBlock({ children }: { children: React.ReactNode })
             Desktop Experience Required
           </h1>
           <p className="text-muted-foreground text-base leading-relaxed break-words">
-            This portfolio is optimized for desktop, laptop, and tablet screens. Please visit this site on a computer, laptop, or tablet for the best experience.
+            This portfolio is designed for desktop and laptop screens. Please visit on a screen at least 1024 pixels wide.
           </p>
           <div className="pt-2">
             <p className="text-xs text-muted-foreground">
-              Minimum screen width: 768px
+              Minimum screen width: 1024px
             </p>
           </div>
         </div>

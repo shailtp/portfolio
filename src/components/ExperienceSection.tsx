@@ -86,15 +86,10 @@ export default function ExperienceSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const section = sectionRef.current;
+    if (section) observer.observe(section);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -124,12 +119,14 @@ export default function ExperienceSection() {
                   const isExpanded = expandedCards[cardId] || false;
                   
                   return (
-                    <div
+                    <button
+                      type="button"
                       key={index}
+                      aria-expanded={isExpanded}
                       className={cn(
-                        "bg-card border border-border/40 rounded-xl",
+                        "w-full bg-card border border-border/40 rounded-xl text-left",
                         "hover:shadow-lg transition-all duration-300 cursor-pointer",
-                        "staggered-fade-in overflow-hidden"
+                        "staggered-fade-in overflow-hidden focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       )}
                       onClick={() => setExpandedCards(prev => ({ ...prev, [cardId]: !prev[cardId] }))}
                     >
@@ -203,7 +200,7 @@ export default function ExperienceSection() {
                           />
                         </div>
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -218,12 +215,14 @@ export default function ExperienceSection() {
                   const isExpanded = expandedCards[cardId] || false;
                   
                   return (
-                    <div
+                    <button
+                      type="button"
                       key={index}
+                      aria-expanded={isExpanded}
                       className={cn(
-                        "bg-card border border-border/40 rounded-xl",
+                        "w-full bg-card border border-border/40 rounded-xl text-left",
                         "hover:shadow-lg transition-all duration-300 cursor-pointer",
-                        "staggered-fade-in overflow-hidden"
+                        "staggered-fade-in overflow-hidden focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                       )}
                       onClick={() => setExpandedCards(prev => ({ ...prev, [cardId]: !prev[cardId] }))}
                     >
@@ -297,7 +296,7 @@ export default function ExperienceSection() {
                           />
                         </div>
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -307,4 +306,4 @@ export default function ExperienceSection() {
       </div>
     </section>
   );
-} 
+}

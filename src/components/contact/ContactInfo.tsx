@@ -1,17 +1,18 @@
 
 import { cn } from "@/lib/utils";
-import { Mail, MapPin, Phone, Github, Linkedin, Globe } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { ReactNode } from "react";
 
 type ContactInfoItemProps = {
   icon: ReactNode;
   label: string;
   value: string;
-  href: string;
+  href?: string;
 };
 
-const ContactInfoItem = ({ icon, label, value, href }: ContactInfoItemProps) => (
-  <a href={href} className="flex items-center gap-4 group">
+const ContactInfoItem = ({ icon, label, value, href }: ContactInfoItemProps) => {
+  const content = (
+    <>
     <span className="p-3 bg-background rounded-full text-foreground/70 group-hover:text-foreground transition-colors">
       {icon}
     </span>
@@ -21,8 +22,17 @@ const ContactInfoItem = ({ icon, label, value, href }: ContactInfoItemProps) => 
         {value}
       </p>
     </div>
-  </a>
-);
+    </>
+  );
+
+  return href ? (
+    <a href={href} className="flex items-center gap-4 group">
+      {content}
+    </a>
+  ) : (
+    <div className="flex items-center gap-4">{content}</div>
+  );
+};
 
 const ContactInfo = () => {
   // Contact info data
@@ -43,7 +53,6 @@ const ContactInfo = () => {
       icon: <MapPin size={20} />,
       label: "Location",
       value: "San Francisco, CA",
-      href: "#",
     },
   ];
 
