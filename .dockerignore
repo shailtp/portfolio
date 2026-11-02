@@ -1,1 +1,4 @@
-fly.toml
+.git
+node_modules
+dist
+*.log
